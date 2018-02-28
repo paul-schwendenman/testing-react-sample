@@ -15,7 +15,7 @@ describe('<Avatar/>', function () {
 
   it('should have props for email and src', function () {
     const wrapper = shallow(<Avatar/>);
-    expect(wrapper.props().email).to.be.defined;
-    expect(wrapper.props().src).to.be.defined;
+    expect(wrapper.props().email).to.equal(undefined);
+    expect(wrapper.props().src).to.equal(undefined);
   });
 });
