@@ -1,8 +1,11 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import {expect} from 'chai';
 
 import Avatar from '../lib/avatar';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Avatar/>', function () {
   it('should have an image to display the gravatar', function () {
